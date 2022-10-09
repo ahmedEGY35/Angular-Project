@@ -1,0 +1,34 @@
+<body class="SU">
+  <header>
+      <div>
+          <img src="./assets/Images/logo1w.png"  id="logo" alt="This Img is unavialable">
+      </div>
+      <div class="sb">
+          <input type="search" placeholder="Search..." id="searchbar">
+          <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Main page</a></li>
+                  <li><a href="Products">Products</a></li>
+                  <li><a href="Services">Services</a></li>
+                  <li><a href="AboutUs">About Us</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <main class="MainSU">
+      <form method="get" #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+          <label for="Email">Username</label>
+          <input type="email" name="Email" placeholder="Email or Username" required ngModel>
+          <br>
+
+          <label for="Pass">Password</label>
+          <input type="password" name="Pass" placeholder="Enter your Password" required ngModel>
+          <br>
+
+          <input type="submit" value="Log In" class="buSU buSI" [disabled]="!loginForm.valid">
+      </form>
+  </main>
+</body>

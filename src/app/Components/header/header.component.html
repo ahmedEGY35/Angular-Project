@@ -1,0 +1,31 @@
+<header>
+  <div>
+      <img src="./assets/Images/logo1w.png"  id="logo" alt="This Img is unavialable">
+  </div>
+  <div class="sb">
+      <input type="search" placeholder="Search..." id="searchbar">
+      <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+  <div>
+      <nav>
+          <ul>
+            <li><a routerLink="/Products">Products</a></li>
+            <li><a routerLink="/Services">Services</a></li>
+            <li><a routerLink="/Cart">Add To Cart</a></li>
+            <li *ngIf="!loggedIn()"><a routerLink="/SignUp">Sign Up</a></li>
+            <!-- <li *ngIf="loggedIn()"><a (click)="onLogout()">Log Out</a></li> -->
+            <div *ngIf="loggedIn()" class="dropdown mr-5" dropdown>
+              <a href="#" class="dropdown-toggle text-light" dropdownToggle (click)="false">Welcome {{lgInUser}}</a>
+              <div class="dropdown-menu" *dropdownMenu>
+                <a href="#" class="dropdown-item">
+                  <i class="far fa-user-circle"></i>My Profile</a>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-key"></i> Change Password</a>
+                <a (click)="onLogout()" class="dropdown-item">
+                  <i class="fas fa-sign-out-alt"></i>LogOut</a>
+              </div>
+            </div>
+          </ul>
+      </nav>
+  </div>
+</header>

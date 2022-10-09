@@ -1,0 +1,13 @@
+<!-- <div class="category"> -->
+  <div class="train ">
+    <img src={{category.Image}} class="imgtrain" alt="Unavailable">
+    <h3>{{category.Name}}</h3>
+    <p>{{category.Description}}</p>
+  <!-- <button class="modbup1 x" *ngIf="!atcv">{{category.Price}} LE</button>
+  <button class="modbup1 x" (click)="remove(category.id)" *ngIf="!atcv">Remove Product</button> -->
+  <button class="modbup1 x" onclick="payment()"  >{{category.Price|currency:"EGP"}}</button>
+
+  </div>
+<!-- </div> -->
+
+

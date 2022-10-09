@@ -1,0 +1,60 @@
+<body class="SU">
+  <header>
+      <div>
+          <img src="./assets/Images/logo1w.png"  id="logo" alt="This Img is unavialable">
+      </div>
+      <div class="sb">
+          <input type="search" placeholder="Search..." id="searchbar">
+          <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Main page</a></li>
+                  <li><a href="Products">Products</a></li>
+                  <li><a href="Services">Services</a></li>
+                  <li><a href="AboutUs">About Us</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <main class="MainSU">
+      <form method="get" #SignUpForm="ngForm" (ngSubmit)="onSignUp(SignUpForm)">
+          <label for="Email">Email</label>
+          <input type="email" name="Email" placeholder="Enter your Email" required ngModel>
+          <br>
+
+          <label for="Pass">Password</label>
+          <input type="password" name="Pass" placeholder="Enter your Password" required ngModel>
+          <br>
+
+          <label for="Tel">Telphone</label>
+          <input type="tel" name="Tel" placeholder="+20123456789" ngModel>
+          <br>
+
+          <label for="Crd">Credit Card Number</label>
+          <input type="number" name="Crd" required ngModel>
+          <br>
+
+          <label for="d" class="date">Date</label>
+          <input type="date" name="d" class="date" ngModel>
+          <br>
+
+          <label for="sg">Gender</label>
+          <select name="Gender" id="sg">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+          </select>
+          <br>
+
+          <label for="ts" id="texp">I agree to the Terms ,Services & Policy of the website</label>
+          <input type="checkbox" id="ts" required>
+
+          <input type="submit" value="Register" class="buSU" [disabled]="!SignUpForm.valid">
+
+      </form>
+  </main>
+  <div class="MainSU excep">
+      <p>Already have an account <a href="SignIn" id="sign">Sign In</a></p>
+  </div>
+</body>

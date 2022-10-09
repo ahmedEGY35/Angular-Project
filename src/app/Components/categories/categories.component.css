@@ -1,0 +1,12 @@
+.BigCate{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+@media screen and (max-width:841px){
+  .BigCate{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 7%;
+  }
+}
